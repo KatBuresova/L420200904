@@ -1,0 +1,26 @@
+.pexesodesk {
+    --rotate-speed: .5s;
+    --scale-speed: .25s;
+}
+
+
+.pexesodesk > .card-item > .back, .pexesodesk > .card-item:hover > .face{
+    transform: rotateY(0deg);
+    transition: ease 0.5s;
+}
+.pexesodesk > .card-item:hover > .back, .pexesodesk > .card-item > .face{
+    transform: rotateY(180deg);
+    transition: ease 0.5s;
+}
+.pexesodesk > .card-item > .back, .pexesodesk > .card-item > .face{
+    backface-visibility: hidden;
+}
+.pexesodesk > .card-item:hover{
+    transform:scale(1.5);
+    transition: transform 0.25s 0.5s;
+    z-index: 2;
+}
+.pexesodesk > .card-item{
+    transform: scale(1);
+    transition: transform 0.5s 0s;
+}
